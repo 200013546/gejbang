@@ -1,0 +1,142 @@
+.jumbotron {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 0%;
+    background-image: url("../img/logo.JPG");
+    background-size: 20%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 100px;
+    padding-top: 60px;
+    background-color: #ffffff;
+    border: none;
+    color: white;
+    
+}
+
+.jumbotron .container {
+    position:relative;
+    top:20px;
+}
+
+.card-body {
+    margin: 0px;
+  }
+
+
+p {
+    margin: 20px;
+    /* background-color: blue */
+}
+
+.text-right {
+   margin-bottom: 10px;
+    
+}
+
+.form-control {
+    word-wrap: break-word;
+    display: flex;
+    flex: 100%;
+    width: 420px;
+    height: 34px;
+}
+
+.card {
+    margin-left: 400px;
+    margin-right: 400px;
+   
+}
+
+#title, #url, #metadata, #type {
+    align-content: flex-start;
+    
+}
+
+#result {
+
+    width: 100%;
+    align-self: auto; 
+    padding-left: 70px; 
+    border: transparent;
+    color: white;
+    margin-right: auto;
+    margin-left: auto;
+    position: inherit; 
+    
+}
+
+
+.card-title {
+   margin: 0px;
+
+}
+#character-search {
+    display: flex;
+    flex: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;
+    width: 33.3%;
+    height: 34px;
+    margin-left: 33.3%; 
+}
+
+.searchRow {
+    float: center;
+    
+}
+
+/* .card-header {
+    width: 420px;
+    height: auto;
+
+}  */
+.center{
+    text-align: center;
+   
+  }
+
+img {
+    position: relative;
+    width: 50%;
+    height: 50%;
+  }
+
+  
+  @media (min-width: 992px) {
+    body {
+      padding-top: 10px;
+    }
+  }
+  
+#add-btn {
+    padding: auto;
+  
+}
+
+
+#add-link {
+    padding: auto;
+    margin: auto;
+    float: center;
+}
+
+#home-btn {
+    padding: auto;
+
+}
+button{
+    background-color: #337ab7;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+}
