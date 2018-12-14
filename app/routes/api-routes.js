@@ -1,9 +1,6 @@
 var Links = require("../models/links.js");
-express = require('express');
-app = express();
 module.exports = function (app) {
   app.get("/api/:links?", function (req, res) {
-    // check if spaces for multiple words
     var reqChars = req.params.links;
     if (reqChars) {
       var words = reqChars.split(" ");
@@ -75,23 +72,9 @@ module.exports = function (app) {
     Links.create({
       title: link.title,
       url: link.url,
+      sso: link.sso,
       metadata: link.metadata,
       typeid: link.typeid
     });
   });
-  // app.post("/api/login", function (req, res) {
-  //   var login1 = req.body;
-  //   var login2 = req.query;
-  //   console.log(login1);
-  //   console.log(login2);
-  //   // var sso = req.body.sso;
-  //   // var name = login.name;
-  //   // alert(JSON.stringify(req));
-  //   // alert("Data: " + req + "\nStatus: " + res);
-  //   // console.log(login.name);
-  //   // login.create({
-  //   //     name: login.name,
-  //   //     sso: login.sso
-  //   // });
-  // });
 };

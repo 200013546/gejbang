@@ -26,3 +26,32 @@ $("#character-search").on("keyup", function () {
     }
   });
 });
+
+// Check the login status
+// Read the cookies
+
+var loginShow = "Login";
+var url = "http://isscindart01.admin.net.ge.com/gebang/register.php";
+var aurl = "http://isscindart01.admin.net.ge.com/gebang/registera.php";
+var sso = getCookieValue("sso");
+var name = decodeURI(getCookieValue("name"));
+if (sso != "") {
+  // alert("Welcome again " + sso);
+  loginShow = "Welcome " + name + " (" + sso + ")";
+  url = "https://ssologin.ssogen2.corporate.ge.com/logoff/logoff.jsp";
+  aurl = "./add.html";
+}
+var loginResults = $("<a>");
+loginResults.html(loginShow);
+loginResults.attr("href", url).attr('target', 'logout');;
+$("#login-section").html(loginResults);
+// $("#login-section").html("Hello World");
+
+var addResults = '<a class="btn btn-primary btn-md" href= ' + aurl + ' role="button" id="add-btn"><span class="fa fa-fire"></span> Add Link</a>';
+
+$("#add-section").html(addResults);
+
+function getCookieValue(a) {
+  var b = document.cookie.match('(^|;)\\s*' + a + '\\s*=\\s*([^;]+)');
+  return b ? b.pop() : '';
+}
