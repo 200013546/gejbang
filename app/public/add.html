@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>JBANG</title>
+	<title>JBANG SEARCH ENGINE</title>
 	<!-- Latest compiled and minified CSS & JS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -58,7 +58,21 @@
 						</div>
 
 						<div class="form-group">
-							<input type="text" class="form-control" id="typeid" placeholder="Type">
+							<select class="custom-select" id="typex">
+								<option selected>Existing Type</option>
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<input type="text" class="form-control" id="typeid" placeholder="or New Type">
+						</div>
+
+						<div class="form-group form-check">
+							<input type="checkbox" class="form-check-input" id="view">
+							<label class="form-group-label" for="view">Public</label>
 						</div>
 
 					</form>

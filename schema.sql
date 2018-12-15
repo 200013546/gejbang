@@ -1,27 +1,19 @@
--- J'BANG! database is called xjh86w1rt52735sx;
-
-DROP DATABASE IF EXISTS xjh86w1rt52735sx;
 
 DROP TABLE IF EXISTS links;
 
-USE xjh86w1rt52735sx;
-
 -- Create the table tasks.
-CREATE TABLE links (
-    id int AUTO_INCREMENT,
-    url varchar(255) NOT NULL,
-    title varchar(255),
-    metadata text,
-    type varchar(100),
-    popularity INT DEFAULT 0,
-    createdAt TIMESTAMP NOT NULL,
-    updatedAT TIMESTAMP NOT NULL,
-    PRIMARY KEY (id)
-);
-
-INSERT INTO links (url,title,metadata,popularity) VALUES (
-    "https://freephotos.cc/",
-    "FreePhotos.cc - Free Stock Photos, Royalty Free Images (CC)",
-    "Find free beautiful stock photos with Creative Commons (CC) licensing. Download royalty free images and use them on your website or print!",
-    "0"
-    );
+CREATE TABLE `links` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `url` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `sso` varchar(9) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `view` int(1) DEFAULT NULL,
+  `metadata` text COLLATE utf8_unicode_ci,
+  `info` text COLLATE utf8_unicode_ci,
+  `typeid` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `popularity` int(11) DEFAULT '0',
+  `createdAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updatedAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `idx_links_url` (`url`)
+) ENGINE=InnoDB AUTO_INCREMENT=380 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

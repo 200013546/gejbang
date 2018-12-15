@@ -73,6 +73,7 @@ module.exports = function (app) {
       title: link.title,
       url: link.url,
       sso: link.sso,
+      view: link.view,
       metadata: link.metadata,
       typeid: link.typeid
     });
