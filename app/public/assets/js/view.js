@@ -1,8 +1,8 @@
-$("#character-search").on("keyup", function () {
-  var searchedCharacter = $("#character-search")
+$("#link-search").on("keyup", function () {
+  var searchedLink = $("#link-search")
     .val()
     .trim();
-  $.get("/api/" + searchedCharacter, function (data) {
+  $.get("/api/" + searchedLink, function (data) {
     console.log(data);
     $("#well-section").empty();
     if (!data) {

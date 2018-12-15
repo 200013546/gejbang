@@ -2,7 +2,7 @@
 // Send to DB from here
 $("#add-btn").on("click", function (event) {
   event.preventDefault();
-  var newCharacter = {
+  var newLink = {
     title: $("#title").val().trim(),
     url: $("#url").val().trim(),
     sso: getCookie("sso"),
@@ -13,24 +13,24 @@ $("#add-btn").on("click", function (event) {
 
   // data integrity check
 
-  if (!/^[0-9A-Za-z\s\-]+$/.test(newCharacter.title)) {
+  if (!/^[0-9A-Za-z\s\-]+$/.test(newLink.title)) {
     return alert("invalid character in Title field.  Upper and lower case letters and numbers please.")
   }
   if (!/^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/.test($("#url").val())) {
     return alert("invalid link in URL field.  Please check and re-enter.")
   }
-  if (!/^[0-9A-Za-z\s\-]+$/.test(newCharacter.metadata)) {
+  if (!/^[0-9A-Za-z\s\-]+$/.test(newLink.metadata)) {
     return alert("invalid character in Description field.  Upper and lower case letters and numbers please.")
   }
-  if (!/^[0-9A-Za-z\s\-]+$/.test(newCharacter.typeid)) {
+  if (!/^[0-9A-Za-z\s\-]+$/.test(newLink.typeid)) {
     return alert("invalid character in Type field.  Upper and lower case letters and numbers please.")
   }
 
 
-  $.post("/api/new", newCharacter)
+  $.post("/api/new", newLink)
     .then(function (data) {
       console.log(data);
-      alert("Adding character...");
+      alert("Adding link...");
     });
   $("#title").val("");
   $("#url").val("");
