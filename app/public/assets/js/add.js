@@ -64,3 +64,35 @@ function checkView(view) {
     return 0
   }
 }
+
+// Check the login status via cookies
+
+var loginShow = "Login";
+var url = "http://isscindart01.admin.net.ge.com/gebang/register.php";
+var aurl = "http://isscindart01.admin.net.ge.com/gebang/registera.php";
+var sso = getCookieValue("sso");
+var name = decodeURI(getCookieValue("name"));
+var target = "_self";
+
+if (sso != "") {
+  var loginName = name;
+  loginShow = "Logout";
+  url = "./logout.html";
+  aurl = "./add.html";
+  target = "_self";
+  $("#login-name").html(loginName);
+}
+
+var loginResults = $("<a>");
+loginResults.html(loginShow);
+loginResults.attr("href", url).attr('target', target);;
+$("#login-section").html(loginResults);
+$("#login-name").html(loginName);
+
+var addResults = '<a class="btn btn-primary btn-md" href= ' + aurl + ' role="button" id="add-btn"><span class="fa fa-fire"></span> Add Link</a>';
+$("#add-section").html(addResults);
+
+function getCookieValue(a) {
+  var b = document.cookie.match('(^|;)\\s*' + a + '\\s*=\\s*([^;]+)');
+  return b ? b.pop() : '';
+}

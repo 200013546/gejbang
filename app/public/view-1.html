@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<title>JBANG SEARCH ENGINE</title>
+	<LINK REL="SHORTCUT ICON" HREF="assets/img/favicon.ico" />
+	<!-- Latest compiled and minified CSS & JS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+	<!-- Designed to be responsive to mobile devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+	<link rel="stylesheet" href="assets/css/uldropdown.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="assets/js/uldropdown.js"></script>
+	<script>
+		jQuery(function ($) {
+			dropdown1 = new uldropdown({
+				dropid: 'dropdown1', // id of menu DIV container
+				overlay: false, // true = drop down, false = expanding menu
+				onSelect($selected) { // when user selects a value
+					$('#output').val('Selected Text: ' + $selected.text() + '\n\n' + 'Selected Value: ' + $selected.attr('href'))
+					console.log($selected.text())
+				}
+			})
+		})
+
+	</script>
+</head>
+
+<body>
+	<div class="jumbotron animated tada">
+		<div class="container" <div class="row">
+		</div>
+	</div>
+	<div class="card-body" id="login-name">
+	</div>
+
+	<div class="col-md-12">
+		<div class="row">
+			<div class="card-body">
+				<label for="link-search"></label>
+				<input type="text" id="link-search" class="form-control" placeholder="Search">
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="col-md-12" id="link">
+		<div class="row-md-12">
+			<div class="col-lg-12">
+				<div class="card" id="result">
+					<!-- <div class="card-header">
+						<h3 class="card-title"><strong>Link Results</strong></h3>
+					</div> -->
+					<div class="card-body" id="well-section">
+
+						<!-- Content will go in here -->
+
+					</div>
+				</div>
+			</div>
+			<div id="dropdown1" class="uldropdown">
+					<div class="titletext">Select a Value</div>
+					  <ul>
+						  <li><a href="#chair1">Excellent Budget Ergonomic Chair with Adjustable L...</a></li>
+						  <li><a href="#chair2">High End Ergonomic Chair with Price Conscious Pric...</a></li>
+						  <li><a href="#chair3">Best Cushioned Budget Office Chair...</a></li>
+						  <li><a href="#chair4">Lockable Reclining High Back Chair...</a></li>
+						  <li><a href="#chair5">Long Lasting, Lightweight Ergonomic Office Chair...</a></li>
+						  <li><a href="#chair6">Why you need an Ergonomic Chair...</a></li>
+						  <li><a href="#chair7">Which is the Best Ergonomic Chair under $200?...</a></li>
+					  </ul>
+				  </div>
+				  
+				  <textarea id="output" style="width: 90%;height:100px;margin-top:1em"></textarea>
+				  
+				  <p>
+				  <a href="#" onClick="dropdown1.expand(event); return false">Expand Menu</a> | 
+				  <a href="#" onClick="dropdown1.selectit(1); return false">Select First Menu Item</a> |
+				  <a href="#" onClick="dropdown1.unselect(); return false">Unselect Menu</a>
+				  </p>
+			<center>
+				<p class="text-center"></p>
+				<!-- <a class="btn btn-primary btn-md" href="./add.html" role="button" id="add-btn"><span class="fa fa-fire"></span> Add
+					Link</a> -->
+				<div>
+					<div id="add-section">
+					</div>
+					</p>
+			</center>
+
+		</div>
+	</div>
+	</div>
+	<div class="card-body" id="login-section">
+	</div>
+	<div class="card-body" id="login-name">
+	</div>
+	<a href="http://isscindart01.admin.net.ge.com/gebang/register.php"></a>
+	<!-- Custom Script -->
+	<script src="assets/js/view.js" type="text/javascript"></script>
+
+</body>
+
+</html>

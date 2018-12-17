@@ -1,3 +1,5 @@
+// var jbangcookie = require("jbangcookie");
+
 $("#link-search").on("keyup", function () {
   var searchedLink = $("#link-search")
     .val()
@@ -9,6 +11,7 @@ $("#link-search").on("keyup", function () {
       $("#well-section").clear();
     }
     else {
+      // $("#well-section-header").text('<div class="card" id="result">');
       for (var i = 0; i < data.length; i++) {
         var linkShow = data[i].typeid;
         if (data[i].typeid === '') {
@@ -16,11 +19,18 @@ $("#link-search").on("keyup", function () {
         }
         linkShow += " - Title: " + data[i].title;
         linkTitle = "Description: " + data[i].metadata + "\u000d\u000dURL: " + data[i].url;
+
         var linkResults = $("<a>");
         linkResults.html(linkShow);
         linkResults.attr("href", data[i].url).attr('target', 'newlink');;
         linkResults.attr("title", linkTitle).attr('target', 'newlink');;
         linkResults.append("<br>");
+
+        // var delResults = $("<a>");
+        // delResults.html(linkShow);
+        // delResults.attr("href", data[i].url).attr('target', 'newlink');;
+        // delResults.attr("title", linkTitle).attr('target', 'newlink');;
+
         $("#well-section").append(linkResults);
       }
     }
@@ -37,17 +47,19 @@ var name = decodeURI(getCookieValue("name"));
 var target = "_self";
 
 if (sso != "") {
-  loginShow = "Welcome " + name + " (" + sso + ")";
+  var loginName = name;
+  loginShow = "Logout";
   url = "./logout.html";
   aurl = "./add.html";
-  target = "logout";
+  target = "_self";
+  $("#login-name").html(loginName);
+} else {
+  var loginResults = $("<a>");
+  loginResults.html(loginShow);
+  loginResults.attr("href", url).attr('target', target);;
+  // $("#login-section").html(loginResults);
+  $("#login-name").html(loginResults);
 }
-
-var loginResults = $("<a>");
-loginResults.html(loginShow);
-loginResults.attr("href", url).attr('target', target);;
-$("#login-section").html(loginResults);
-
 var addResults = '<a class="btn btn-primary btn-md" href= ' + aurl + ' role="button" id="add-btn"><span class="fa fa-fire"></span> Add Link</a>';
 $("#add-section").html(addResults);
 
