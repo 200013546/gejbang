@@ -1,52 +1,17 @@
 body {
-    background-image: url("../img/GE_building.jpg");
-      /* Center and scale the image nicely */
-  /* background-position: center; */
+  background-image: url("../img/GE_building.jpg");
   background-repeat: no-repeat;
-  /* background-size: 100%; */
-  /* -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; */
-  /* background-size: 100%; */
   background-size:     cover;
-  /*background-repeat:   no-repeat;
-  background-position:  center;  */
 }
-
-
-/* .jumbotron {
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 0%;
-    background-image: url("../img/logo.JPG");
-    background-size: 20%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    min-height: 100px;
-    padding-top: 60px;
-    /* background-color: #ffffff; */
-    /* border: none;
-    color: white;
-     */
-/* }
-
-.jumbotron .container {
-    position:relative;
-    top:20px;
-} */ */
 
 .card-body {
     margin: 0px;
-    opacity: .4;
+    opacity: 1;
   }
 
 
 p {
     margin: 20px;
-    /* background-color: blue */
 }
 
 .text-right {
@@ -66,10 +31,6 @@ p {
 .card {
     margin-left: 400px;
     margin-right: 400px;
-    /* opacity: .7; */
-    /* padding:20px;
-    width:710px;
-    position:relative; */
     background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
     background: rgba(204, 204, 204, 0.0);
    }
@@ -77,6 +38,9 @@ p {
 #title, #url, #metadata, #type {
     align-content: flex-start;
     
+}
+.center-element {
+  margin: auto;
 }
 
 #result {
@@ -114,27 +78,9 @@ p {
     
 }
 
-/* .card-header {
-    width: 420px;
-    height: auto;
-
-}  */
 .center{
     text-align: center;
    
-  }
-/* 
-img {
-    position: relative;
-    width: 50%;
-    height: 50%;
-  } */
-
-  
-  @media (min-width: 992px) {
-    body {
-      padding-top: 10px;
-    }
   }
   
 #add-btn {
@@ -267,4 +213,13 @@ button{
   .navbar-inverse .btn-link[disabled]:focus,
   fieldset[disabled] .navbar-inverse .btn-link:focus {
     color: #444;
+  }
+
+  #login-section {
+    font-size: 9px;
+  }
+
+  .transparent-panel {
+    opacity: .9;
+    background-color: #606068;
   }

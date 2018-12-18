@@ -68,6 +68,8 @@ module.exports = function (app) {
     // Query Ends
   });
 
+  // Future enhancement
+  
   // app.delete("/api/:id", function (req, res) {
   //   connection.query("DELETE	FROM	links	WHERE	id	=	?", [req.params.id], function (err, result) {
   //     if (err) return res.status(500).end();	//	If	an	error	occurred,	send	a	generic	server	failure

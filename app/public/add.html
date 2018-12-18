@@ -4,58 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <title>JBANG SEARCH ENGINE</title>
-    <!-- Latest compiled and minified CSS & JS -->
+    <LINK REL="SHORTCUT ICON" HREF="assets/img/favicon.ico" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://kraaden.github.io/autocomplete/autocomplete.js"></script>
     <link rel="stylesheet" type="text/css" href="https://kraaden.github.io/autocomplete/autocomplete.css">
-    <link rel="stylesheet" href="assets/css/new_style_add.css" type="text/css" />
-    <!-- Designed to be responsive to mobile devices -->
+    <link rel="stylesheet" href="assets/css/style_add.css" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-
-    <!-- from Gio -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  -->
-
-
-
 </head>
 
 <body>
-    <!-- <div class="jumbotron animated tada">
-		<div class="container" <div class="row">
-		</div>
-	</div> -->
-
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="./view.html">GE CoreTech JBANG</a>
+                <a class="navbar-brand" href="./view.html"><img src="assets/img/ge-monogram-white.svg"> GE CoreTech JBANG</a>
             </div>
             <ul class="nav navbar-nav">
-                <!-- <li class="active"><a href="#">Home</a></li> -->
                 <li><a class="navbar-brand" href="./view.html" id="addlink">Home</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                    <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
-                    <li><span class="navbar-brand" id="login-name"></span></li>
-                  </ul>
-                </div>
+                <li><span class="navbar-brand" id="login-name"></span></li>
+        </div>
     </nav>
-
-
-    <!-- <center>
-		<p class="text-center"><a class="btn btn-primary btn-md" href="./view.html" role="button" id="home-btn"><span class="fa fa-fire"></span>
-				Go Home</a></p>
-	</center> -->
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br>
+
+    <br><br><br><br><br><br><br><br><br><br>
+
     <div class="row">
         <div class="col-lg-12">
             <div class="card">
@@ -63,19 +43,19 @@
                     <form action="" method="POST" role="form">
 
                         <div class="form-group">
-                            <input type="text" class="form-control" id="title" placeholder="Title">
+                            <input type="text" class="form-control center-element" id="title" placeholder="Title">
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control" id="url" placeholder="URL">
+                            <input type="text" class="form-control center-element" id="url" placeholder="URL">
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control" id="metadata" placeholder="Description">
+                            <input type="text" class="form-control center-element" id="metadata" placeholder="Description">
                         </div>
 
                         <div class="form-group">
-                            <select class="custom-select form-control" id="typex">
+                            <select class="custom-select form-control center-element" id="typex">
                                 <option selected>Existing Type</option>
                                 <option value="Business Escalations">Business Escalations</option>
                                 <option value="Digital Operations">Digital Operations</option>
@@ -90,10 +70,10 @@
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control" id="typeid" placeholder="or New Type">
+                            <input type="text" class="form-control center-element" id="typeid" placeholder="or New Type">
                         </div>
 
-                        <div class="form-group form-check">
+                        <div class="form-group form-check center">
                             <input type="checkbox" class="form-check-input" id="view">
                             <label class="form-group-label card-title" for="view">Public</label>
                         </div>

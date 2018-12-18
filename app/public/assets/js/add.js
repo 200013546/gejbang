@@ -67,6 +67,7 @@ function checkView(view) {
 
 // Check the login status via cookies
 
+// If not logged in
 var loginShow = "Login";
 var url = "http://isscindart01.admin.net.ge.com/gebang/register.php";
 var aurl = "http://isscindart01.admin.net.ge.com/gebang/registera.php";
@@ -76,16 +77,18 @@ var target = "_self";
 
 if (sso != "") {
   var loginName = name;
-  loginShow = "Logout";
+  loginShow = "(Logout)";
   url = "./logout.html";
   aurl = "./add.html";
   target = "_self";
-  $("#login-name").html(loginName);
+  var loginResults = $("<a>");
+  loginResults.attr("href", url).attr('target', target);
+} else {
+  var loginResults = $("<a>");
+  loginResults.attr("href", url).attr('class', 'navbar-brand').attr('target', target);
 }
 
-var loginResults = $("<a>");
 loginResults.html(loginShow);
-loginResults.attr("href", url).attr('target', target);;
 $("#login-section").html(loginResults);
 $("#login-name").html(loginName);
 
